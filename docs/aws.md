@@ -244,6 +244,18 @@ problems with the Kubernetes API not coming up, chances are something is wrong
 with the cluster's DNS.
 
 **Please DO NOT MOVE ON until you have validated your NS records! This is not required if a gossip-based cluster is created.**
+export EDITOR=...
+etcdClusters:
+  - etcdMembers:
+    - instanceGroup: master-eu-central-1a
+      name: a
+      volumeSize: 2 # add this line
+    name: main
+  - etcdMembers:
+    - instanceGroup: master-eu-central-1a
+      name: a
+      volumeSize: 2 # add this line
+    name: events
 
 ## Cluster State storage
 
